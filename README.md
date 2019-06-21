@@ -42,6 +42,11 @@ Resizing can be done in following ways-
 * By resizing video `ffmpeg -i input.avi -vf scale=1024:-1 output.avi`
 * By decreasing bit rate use a bitrate of 64kb/sec `ffmpeg -i input.mp4 -b 64k output.mp4`
 
+## Covert PDF to JPEG (high quality)
+```
+convert -density 600 page.pdf -quality 90 -background white -alpha remove page.jpg
+```
+
 ## References
 The above information is taken from various sources such as following-
 * [Video Stackexchange](http://video.stackexchange.com/a/4571)
