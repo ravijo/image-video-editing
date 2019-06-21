@@ -47,6 +47,12 @@ Resizing can be done in following ways-
 convert -density 600 page.pdf -quality 90 -background white -alpha remove page.jpg
 ```
 
+## Create EPS from Latex
+```
+latex main.tex
+dvips -o main.eps main.dvi 
+```
+
 ## References
 The above information is taken from various sources such as following-
 * [Video Stackexchange](http://video.stackexchange.com/a/4571)
