@@ -1,4 +1,4 @@
-# Image-Video-Editing
+# Image and Video Editing
 This repository contains commands for beginner level image and video editing in Ubuntu OS.
 
 # Tools Required
