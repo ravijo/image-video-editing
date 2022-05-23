@@ -12,11 +12,11 @@ This repository contains commands for beginner level image and video editing in 
 ## Install FFmpeg on Ubuntu 14.04
 1. Use PPA. Open the terminal or press <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>T</kbd>
 1. Run following commands-
-```
-sudo add-apt-repository ppa:mc3man/trusty-media
-sudo apt-get update
-sudo apt-get install ffmpeg gstreamer0.10-ffmpeg
-```
+    ```console
+    sudo add-apt-repository ppa:mc3man/trusty-media
+    sudo apt-get update
+    sudo apt-get install ffmpeg gstreamer0.10-ffmpeg
+    ```
 
 ## Image Editing
 ### Resizing
@@ -43,12 +43,12 @@ Resizing can be done in following ways-
 * By decreasing video bit rate use a bitrate of 64kb/sec `ffmpeg -i input.mp4 -b:v 64k output.mp4`
 
 ## Covert PDF to JPEG (high quality)
-```
+```console
 convert -density 600 page.pdf -quality 90 -background white -alpha remove page.jpg
 ```
 
 ## Create EPS from Latex
-```
+```console
 latex main.tex
 dvips -o main.eps main.dvi 
 ```
