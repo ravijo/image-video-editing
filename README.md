@@ -57,6 +57,11 @@ ffmpeg -i input.mov -q:v 0 output.mp4
 ffmpeg -i input.mov -vcodec h264 -acodec mp2 output.mp4
 ```
 
+### Remove Audio from Video
+```console
+ffmpeg -i input.mp4 -c copy -an output.mp4 
+```
+
 ## Convert PDF to JPEG
 ```console
 convert -density 600 input.pdf -quality 90 -background white -alpha remove output.jpg
@@ -94,3 +99,4 @@ The above information is taken from various sources such as following-
 * [FFmpeg with Palette](https://superuser.com/a/1049820)
 * [Mov2Mp4](https://stackoverflow.com/a/12026739)
 * [Mov2Mp4](https://mrcoles.com/convert-mov-mp4-ffmpeg/)
+* [Remove Audio from Video](https://superuser.com/a/268986)
