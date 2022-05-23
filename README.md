@@ -21,10 +21,10 @@ This repository contains commands for beginner level image and video editing in 
 ## Image Editing
 ### Resizing
 Resizing can be done in following ways-
-* Provide the height and width in pixel `convert input.png -resize 800×600 output.png`
-* The above command preserves the aspect ratio. If you want to force the image to become exactly specific size, add exclamation mark like this `convert input.png -resize 800×600! output.png`
+* Provide the height and width in pixel `convert input.png -resize 800x600 output.png`
+* The above command preserves the aspect ratio. If you want to force the image to become exactly specific size, add exclamation mark like this `convert input.png -resize 800x600! output.png`
 * By providing width only and keeping the aspect ratio preserve `convert input.png -resize 800 output.png`
-* By providing height only and keeping the aspect ratio preserve `convert input.png -resize ×600 output.png`
+* By providing height only and keeping the aspect ratio preserve `convert input.png -resize x600 output.png`
 * By providing percentage such as `convert input.png -resize 50% output.png`
 
 ### Convert PNG to JPG
@@ -35,7 +35,7 @@ convert input.png -quality 95 output.jpg
 
 ## Video Editing
 ### Crop
-* Command syntax `ffmpeg -i input.mp4 -filter:v "crop=out_w:out_h:x:y" output.mp4`. For example To crop a 80×60 section, starting from position (200, 100) use the following command:
+* Command syntax `ffmpeg -i input.mp4 -filter:v "crop=out_w:out_h:x:y" output.mp4`. For example To crop a 80x60 section, starting from position (200, 100) use the following command:
 ```console
 ffmpeg -i input.mp4 -filter:v "crop=80:60:200:100" -c:a copy output.mp4
 ```
