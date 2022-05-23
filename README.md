@@ -36,11 +36,11 @@ Resizing can be done in following ways-
 
 ### Cut
 * `ffmpeg -i ~/video/dmp_2.MTS -ss 00:00:03 -to 00:00:16 -c copy dmp_2cut.mp4`
- 
-### Reduce File Size
+
+### Reduce Size
 * By decreasing frame rate 30 frames/sec `ffmpeg -i teach1.mp4 -r 30 teach1_out.mp4`
 * By resizing video `ffmpeg -i input.avi -vf scale=1024:-1 output.avi`
-* By decreasing bit rate use a bitrate of 64kb/sec `ffmpeg -i input.mp4 -b 64k output.mp4`
+* By decreasing video bit rate use a bitrate of 64kb/sec `ffmpeg -i input.mp4 -b:v 64k output.mp4`
 
 ## Covert PDF to JPEG (high quality)
 ```
@@ -53,9 +53,28 @@ latex main.tex
 dvips -o main.eps main.dvi 
 ```
 
+## Gif from Video
+* Normal mode:
+    ```console
+    ffmpeg -i input.mp4 output.gif
+    ```
+* Advance mode:
+    ```console
+    ffmpeg -y -i input.mp4 -vf palettegen palette.png
+    ffmpeg -y -i input.mp4 -i palette.png -filter_complex paletteuse -r 10 -s 320x480 output.gif
+    ```
+
+### Reduce Gif Size
+```console
+mogrify -layers 'optimize' -fuzz 7% file.gif
+```
+
 ## References
 The above information is taken from various sources such as following-
 * [Video Stackexchange](http://video.stackexchange.com/a/4571)
 * [Unix Stackexchange](http://unix.stackexchange.com/a/38380)
 * [Stackoverflow](http://stackoverflow.com/a/28073732)
 * [FFmpeg](https://trac.ffmpeg.org/wiki/Scaling%20(resizing)%20with%20ffmpeg)
+* [Reduce Gif Size](https://stackoverflow.com/a/47343340)
+* [FFmpeg with Palette](https://superuser.com/a/1049820)
+ 
