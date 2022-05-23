@@ -27,12 +27,18 @@ Resizing can be done in following ways-
 * By providing height only and keeping the aspect ratio preserve `convert input.png -resize ×600 output.png`
 * By providing percentage such as `convert input.png -resize 50% output.png`
 
-### Convert Png to Jpg
-* Convert `png` to `jpg` by specifing the compression level using following command `convert input.png -quality 95 output.jpg`
+### Convert PNG to JPG
+* Convert `PNG` to `JPG` by specifing the compression level using following command
+```console
+convert input.png -quality 95 output.jpg
+```
 
 ## Video Editing
 ### Crop
-* Command syntax `ffmpeg -i input.mp4 -filter:v "crop=out_w:out_h:x:y" output.mp4` for example To crop a 80×60 section, starting from position (200, 100) `ffmpeg -i input.mp4 -filter:v "crop=80:60:200:100" -c:a copy output.mp4`
+* Command syntax `ffmpeg -i input.mp4 -filter:v "crop=out_w:out_h:x:y" output.mp4`. For example To crop a 80×60 section, starting from position (200, 100) use the following command:
+```console
+ffmpeg -i input.mp4 -filter:v "crop=80:60:200:100" -c:a copy output.mp4
+```
 
 ### Cut
 ```console
