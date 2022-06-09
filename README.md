@@ -33,6 +33,11 @@ Resizing can be done in following ways-
 convert input.png -quality 95 output.jpg
 ```
 
+### Remove Image Metadata
+```console
+mogrify -strip *.jpg
+```
+
 ## Video Editing
 ### Crop
 * Command syntax `ffmpeg -i input.mp4 -filter:v "crop=out_w:out_h:x:y" output.mp4`. For example To crop a 80x60 section, starting from position (200, 100) use the following command:
