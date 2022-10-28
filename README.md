@@ -43,6 +43,11 @@ mogrify -strip *.jpg
 for file in *.HEIC; do heif-convert $file ${file%.HEIC}.jpg; done
 ```
 
+### Add Text on Image
+```console
+convert -font helvetica -fill white -pointsize 40 -gravity north -draw "text 0,100 'TEXT TO BE DISPLAYED'" input.jpg output.jpg
+```
+
 ## Video Editing
 ### Crop
 * Command syntax `ffmpeg -i input.mp4 -filter:v "crop=out_w:out_h:x:y" output.mp4`. For example To crop a 80x60 section, starting from position (200, 100) use the following command:
@@ -117,3 +122,4 @@ The above information is taken from various sources such as following-
 * [Remove Audio from Video](https://superuser.com/a/268986)
 * [Convert Heic to Jpg](https://ubuntuhandbook.org/index.php/2021/06/open-heic-convert-jpg-png-ubuntu-20-04/)
 * [Add Text on Video](https://stackoverflow.com/a/17624103/1175065)
+* [Add Text on Image](https://stackoverflow.com/a/48966879/1175065)
