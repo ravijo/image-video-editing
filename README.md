@@ -72,6 +72,11 @@ ffmpeg -i input.mov -vcodec h264 -acodec mp2 output.mp4
 ffmpeg -i input.mp4 -c copy -an output.mp4 
 ```
 
+### Add Text on Video
+```console
+ffmpeg -i input.mp4 -vf "drawtext=:text='Stack Overflow':fontcolor=white:fontsize=50:box=1:boxcolor=black@0.5:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)/2" -codec:a copy output.mp4
+```
+
 ## Convert PDF to JPEG
 ```console
 convert -density 600 input.pdf -quality 90 -background white -alpha remove output.jpg
@@ -111,3 +116,4 @@ The above information is taken from various sources such as following-
 * [Mov2Mp4](https://mrcoles.com/convert-mov-mp4-ffmpeg/)
 * [Remove Audio from Video](https://superuser.com/a/268986)
 * [Convert Heic to Jpg](https://ubuntuhandbook.org/index.php/2021/06/open-heic-convert-jpg-png-ubuntu-20-04/)
+* [Add Text on Video](https://stackoverflow.com/a/17624103/1175065)
