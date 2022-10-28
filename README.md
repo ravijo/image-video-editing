@@ -38,6 +38,11 @@ convert input.png -quality 95 output.jpg
 mogrify -strip *.jpg
 ```
 
+### Convert HEIC image to JPG
+```console
+for file in *.HEIC; do heif-convert $file ${file%.HEIC}.jpg; done
+```
+
 ## Video Editing
 ### Crop
 * Command syntax `ffmpeg -i input.mp4 -filter:v "crop=out_w:out_h:x:y" output.mp4`. For example To crop a 80x60 section, starting from position (200, 100) use the following command:
@@ -105,3 +110,4 @@ The above information is taken from various sources such as following-
 * [Mov2Mp4](https://stackoverflow.com/a/12026739)
 * [Mov2Mp4](https://mrcoles.com/convert-mov-mp4-ffmpeg/)
 * [Remove Audio from Video](https://superuser.com/a/268986)
+* [Convert Heic to Jpg](https://ubuntuhandbook.org/index.php/2021/06/open-heic-convert-jpg-png-ubuntu-20-04/)
