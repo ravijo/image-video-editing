@@ -55,6 +55,14 @@ convert -font helvetica -fill white -pointsize 40 -gravity north -draw "text 0,1
 ffmpeg -i input.mp4 -filter:v "crop=80:60:200:100" -c:a copy output.mp4
 ```
 
+#### Preview
+It is better to check the preview before cropping a video. 
+```console
+ffplay -i input.mp4 -vf "crop=80:60:200:100"
+
+ffmpeg.ffplay -i input.mp4 -vf "crop=80:60:200:100" # only if above command says "ffplay: command not found" 
+```
+
 ### Cut
 ```console
 ffmpeg -i input.MTS -ss 00:00:03 -to 00:00:16 -c copy output.mp4
@@ -121,5 +129,6 @@ The above information is taken from various sources such as following-
 * [Mov2Mp4](https://mrcoles.com/convert-mov-mp4-ffmpeg/)
 * [Remove Audio from Video](https://superuser.com/a/268986)
 * [Convert Heic to Jpg](https://ubuntuhandbook.org/index.php/2021/06/open-heic-convert-jpg-png-ubuntu-20-04/)
-* [Add Text on Video](https://stackoverflow.com/a/17624103/1175065)
-* [Add Text on Image](https://stackoverflow.com/a/48966879/1175065)
+* [Add Text on Video](https://stackoverflow.com/a/17624103)
+* [Add Text on Image](https://stackoverflow.com/a/48966879)
+* [Preview Video](https://video.stackexchange.com/a/4571)
