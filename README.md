@@ -48,6 +48,11 @@ for file in *.HEIC; do heif-convert $file ${file%.HEIC}.jpg; done
 convert -font helvetica -fill white -pointsize 40 -gravity north -draw "text 0,100 'TEXT TO BE DISPLAYED'" input.jpg output.jpg
 ```
 
+### Increase Brightness on Image
+```console
+mogrify -brightness-contrast 10  *.JPG
+```
+
 ## Video Editing
 ### Crop
 * Command syntax `ffmpeg -i input.mp4 -filter:v "crop=out_w:out_h:x:y" output.mp4`. For example To crop a 80x60 section, starting from position (200, 100) use the following command:
@@ -132,3 +137,4 @@ The above information is taken from various sources such as following-
 * [Add Text on Video](https://stackoverflow.com/a/17624103)
 * [Add Text on Image](https://stackoverflow.com/a/48966879)
 * [Preview Video](https://video.stackexchange.com/a/4571)
+* [Increase Brightness on Image](https://www.imagemagick.org/script/command-line-options.php#brightness-contrast)
