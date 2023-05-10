@@ -46,6 +46,8 @@ for file in *.HEIC; do heif-convert $file ${file%.HEIC}.jpg; done
 ### Add Text on Image
 ```console
 convert -font helvetica -fill white -pointsize 40 -gravity north -draw "text 0,100 'TEXT TO BE DISPLAYED'" input.jpg output.jpg
+
+convert -font helvetica -undercolor white -fill black -pointsize 40 -gravity northwest -draw "text 0,0 'TEXT TO BE DISPLAYED'" input.jpg output.jpg
 ```
 
 ### Increase Brightness on Image
