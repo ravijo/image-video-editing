@@ -27,6 +27,11 @@ Resizing can be done in following ways-
 * By providing height only and keeping the aspect ratio preserve `convert input.png -resize x600 output.png`
 * By providing percentage such as `convert input.png -resize 50% output.png`
 
+### Crop Image
+```console
+convert input.jpg -crop 640x620+0+0 output.jpg
+```
+
 ### Convert PNG to JPG
 * Convert `PNG` to `JPG` by specifing the compression level using following command
 ```console
@@ -140,3 +145,4 @@ The above information is taken from various sources such as following-
 * [Add Text on Image](https://stackoverflow.com/a/48966879)
 * [Preview Video](https://video.stackexchange.com/a/4571)
 * [Increase Brightness on Image](https://www.imagemagick.org/script/command-line-options.php#brightness-contrast)
+* [Crop Image](https://superuser.com/a/1163824)
