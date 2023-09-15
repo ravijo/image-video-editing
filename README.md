@@ -79,9 +79,14 @@ ffmpeg.ffplay -i input.mp4 -vf "crop=80:60:200:100"
 ```
 
 ### Cut
-```console
-ffmpeg -i input.mp4 -ss 00:00:03 -to 00:00:16 -c copy output.mp4
-```
+* A part in between
+    ```console
+    ffmpeg -i input.mp4 -ss 00:00:03 -to 00:00:16 -c copy output.mp4
+    ```
+* From beginning
+    ```console
+    ffmpeg -i input.mp4 -t 00:00:30 -c copy output.mp4
+    ```
 
 ### Reduce Size
 * By decreasing frame rate 30 frames/sec `ffmpeg -i input.mp4 -r 30 output.mp4`
@@ -157,3 +162,4 @@ The above information is taken from various sources such as following-
 * [Increase Brightness on Image](https://www.imagemagick.org/script/command-line-options.php#brightness-contrast)
 * [Crop Image](https://superuser.com/a/1163824)
 * [Place Two Videos Side-by-Side](https://unix.stackexchange.com/a/437044)
+* [Cut Video from Beginning](https://stackoverflow.com/a/44032)
