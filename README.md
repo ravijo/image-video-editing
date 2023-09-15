@@ -50,9 +50,11 @@ for file in *.HEIC; do heif-convert $file ${file%.HEIC}.jpg; done
 
 ### Add Text on Image
 ```console
-convert -font helvetica -fill white -pointsize 40 -gravity north -draw "text 0,100 'TEXT TO BE DISPLAYED'" input.jpg output.jpg
+convert -font helvetica -fill white -pointsize 40 -gravity north \
+    -draw "text 0,100 'TEXT TO BE DISPLAYED'" input.jpg output.jpg
 
-convert -font helvetica -undercolor white -fill black -pointsize 40 -gravity northwest -draw "text 0,0 'TEXT TO BE DISPLAYED'" input.jpg output.jpg
+convert -font helvetica -undercolor white -fill black -pointsize 40 \
+    -gravity northwest -draw "text 0,0 'TEXT TO BE DISPLAYED'" input.jpg output.jpg
 ```
 
 ### Increase Brightness on Image
@@ -72,7 +74,8 @@ It is better to check the preview before cropping a video.
 ```console
 ffplay -i input.mp4 -vf "crop=80:60:200:100"
 
-ffmpeg.ffplay -i input.mp4 -vf "crop=80:60:200:100" # only if above command says "ffplay: command not found" 
+# Use following, if above command says "ffplay: command not found" 
+ffmpeg.ffplay -i input.mp4 -vf "crop=80:60:200:100"
 ```
 
 ### Cut
@@ -98,7 +101,9 @@ ffmpeg -i input.mp4 -c copy -an output.mp4
 
 ### Add Text on Video
 ```console
-ffmpeg -i input.mp4 -vf "drawtext=:text='Stack Overflow':fontcolor=white:fontsize=50:box=1:boxcolor=black@0.5:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)/2" -codec:a copy output.mp4
+ffmpeg -i input.mp4 -vf "drawtext=:text='Stack Overflow':\
+    fontcolor=white:fontsize=50:box=1:boxcolor=black@0.5:\
+    boxborderw=5:x=(w-text_w)/2:y=(h-text_h)/2" -codec:a copy output.mp4
 ```
 
 ## Convert PDF to JPEG
@@ -120,7 +125,8 @@ dvips -o output.eps input.dvi
 * Advance mode:
     ```console
     ffmpeg -y -i input.mp4 -vf palettegen palette.png
-    ffmpeg -y -i input.mp4 -i palette.png -filter_complex paletteuse -r 10 -s 320x480 output.gif
+    ffmpeg -y -i input.mp4 -i palette.png -filter_complex paletteuse \
+        -r 10 -s 320x480 output.gif
     ```
 
 ### Reduce Gif Size
