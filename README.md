@@ -106,6 +106,11 @@ ffmpeg -i input.mp4 -vf "drawtext=:text='Stack Overflow':\
     boxborderw=5:x=(w-text_w)/2:y=(h-text_h)/2" -codec:a copy output.mp4
 ```
 
+### Place Two Videos Side-by-Side
+```console
+ffmpeg -i left.mp4 -i right.mp4 -filter_complex hstack output.mp4
+```
+
 ## Convert PDF to JPEG
 ```console
 convert -density 600 input.pdf -quality 90 -background white -alpha remove output.jpg
@@ -151,3 +156,4 @@ The above information is taken from various sources such as following-
 * [Preview Video](https://video.stackexchange.com/a/4571)
 * [Increase Brightness on Image](https://www.imagemagick.org/script/command-line-options.php#brightness-contrast)
 * [Crop Image](https://superuser.com/a/1163824)
+* [Place Two Videos Side-by-Side](https://unix.stackexchange.com/a/437044)
