@@ -77,7 +77,6 @@ ffmpeg.ffplay -i input.mp4 -vf "crop=80:60:200:100" # only if above command says
 
 ### Cut
 ```console
-ffmpeg -i input.MTS -ss 00:00:03 -to 00:00:16 -c copy output.mp4
 ffmpeg -i input.mp4 -ss 00:00:03 -to 00:00:16 -c copy output.mp4
 ```
 
