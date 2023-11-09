@@ -116,6 +116,16 @@ ffmpeg -i input.mp4 -vf "drawtext=:text='Stack Overflow':\
 ffmpeg -i left.mp4 -i right.mp4 -filter_complex hstack output.mp4
 ```
 
+### Concatenate Videos
+```console
+$ cat mylist.txt
+file '/path/to/file1'
+file '/path/to/file2'
+file '/path/to/file3'
+    
+$ ffmpeg -f concat -safe 0 -i mylist.txt -c copy output.mp4
+```
+
 ## Convert PDF to JPEG
 ```console
 convert -density 600 input.pdf -quality 90 -background white -alpha remove output.jpg
@@ -163,3 +173,4 @@ The above information is taken from various sources such as following-
 * [Crop Image](https://superuser.com/a/1163824)
 * [Place Two Videos Side-by-Side](https://unix.stackexchange.com/a/437044)
 * [Cut Video from Beginning](https://stackoverflow.com/a/44032)
+* [Concatenate Videos](https://stackoverflow.com/a/11175851)
