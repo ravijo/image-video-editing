@@ -38,6 +38,11 @@ convert input.jpg -crop 640x620+0+0 output.jpg
 convert input.png -quality 95 output.jpg
 ```
 
+### Batch converting PNG to JPG
+```console
+mogrify -format jpg *.png
+```
+
 ### Remove Image Metadata
 ```console
 mogrify -strip *.jpg
@@ -174,3 +179,4 @@ The above information is taken from various sources such as following-
 * [Place Two Videos Side-by-Side](https://unix.stackexchange.com/a/437044)
 * [Cut Video from Beginning](https://stackoverflow.com/a/44032)
 * [Concatenate Videos](https://stackoverflow.com/a/11175851)
+* [Batch converting PNG to JPG](https://superuser.com/q/1679460)
