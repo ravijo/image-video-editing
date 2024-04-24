@@ -41,7 +41,7 @@ convert input.png -quality 95 output.jpg
 ### Batch resize Images
 ```console
 mkdir resized-imgs
-mogrify -resize 50% -quality 95 -path resized-imgs *.jpg
+mogrify -resize 25.4% -quality 95 -path resized-imgs *.jpg
 mogrify -resize 1024x768 -quality 95 -path resized-imgs *.jpg
 ```
 
