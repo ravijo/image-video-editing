@@ -38,6 +38,13 @@ convert input.jpg -crop 640x620+0+0 output.jpg
 convert input.png -quality 95 output.jpg
 ```
 
+### Batch resize Images
+```console
+mkdir resized-imgs
+mogrify -resize 50% -quality 95 -path resized-imgs *.jpg
+mogrify -resize 1024x768 -quality 95 -path resized-imgs *.jpg
+```
+
 ### Batch converting PNG to JPG
 ```console
 mogrify -format jpg *.png
@@ -180,3 +187,5 @@ The above information is taken from various sources such as following-
 * [Cut Video from Beginning](https://stackoverflow.com/a/44032)
 * [Concatenate Videos](https://stackoverflow.com/a/11175851)
 * [Batch converting PNG to JPG](https://superuser.com/q/1679460)
+* [Batch resize Images](https://stackoverflow.com/a/18018161)
+  
