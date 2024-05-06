@@ -138,6 +138,19 @@ file '/path/to/file3'
 $ ffmpeg -f concat -safe 0 -i mylist.txt -c copy output.mp4
 ```
 
+## Gif from Video
+* Normal mode:
+    ```console
+    ffmpeg -i input.mp4 output.gif
+    ```
+* Advance mode:
+    ```console
+    ffmpeg -y -i input.mp4 -vf palettegen palette.png
+    ffmpeg -y -i input.mp4 -i palette.png -filter_complex paletteuse \
+        -r 10 -s 320x480 output.gif
+    ```
+
+## PDF Editing
 ## Convert PDF to JPEG
 ```console
 convert -density 600 input.pdf -quality 90 -background white -alpha remove output.jpg
@@ -153,27 +166,16 @@ pdftk input.pdf cat 12-15 output outfile_p12-15.pdf
 pdftk file1.pdf file2.pdf cat output mergedfile.pdf
 ```
 
+## Miscellaneous
+### Reduce Gif Size
+```console
+mogrify -layers 'optimize' -fuzz 7% file.gif
+```
+
 ## Create EPS from Latex
 ```console
 latex input.tex
 dvips -o output.eps input.dvi 
-```
-
-## Gif from Video
-* Normal mode:
-    ```console
-    ffmpeg -i input.mp4 output.gif
-    ```
-* Advance mode:
-    ```console
-    ffmpeg -y -i input.mp4 -vf palettegen palette.png
-    ffmpeg -y -i input.mp4 -i palette.png -filter_complex paletteuse \
-        -r 10 -s 320x480 output.gif
-    ```
-
-### Reduce Gif Size
-```console
-mogrify -layers 'optimize' -fuzz 7% file.gif
 ```
 
 ## References
