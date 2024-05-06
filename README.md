@@ -143,6 +143,16 @@ $ ffmpeg -f concat -safe 0 -i mylist.txt -c copy output.mp4
 convert -density 600 input.pdf -quality 90 -background white -alpha remove output.jpg
 ```
 
+## Extract Pages from PDF
+```console
+pdftk input.pdf cat 12-15 output outfile_p12-15.pdf
+```
+
+## Join PDFs
+```console
+pdftk file1.pdf file2.pdf cat output mergedfile.pdf
+```
+
 ## Create EPS from Latex
 ```console
 latex input.tex
@@ -188,4 +198,6 @@ The above information is taken from various sources such as following-
 * [Concatenate Videos](https://stackoverflow.com/a/11175851)
 * [Batch converting PNG to JPG](https://superuser.com/q/1679460)
 * [Batch resize Images](https://stackoverflow.com/a/18018161)
-  
+* [Extract Pages from PDF](https://askubuntu.com/a/282455)
+* [Join PDFs](https://askubuntu.com/a/2802)
+* 
