@@ -58,6 +58,8 @@ mogrify -strip *.jpg
 ### Convert HEIC image to JPG
 ```console
 for file in *.HEIC; do heif-convert $file ${file%.HEIC}.jpg; done
+
+mogrify -format jpg *.HEIC
 ```
 
 ### Add Text on Image
