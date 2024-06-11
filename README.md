@@ -168,6 +168,11 @@ pdftk input.pdf cat 12-15 output outfile_p12-15.pdf
 pdftk file1.pdf file2.pdf cat output mergedfile.pdf
 ```
 
+## Remove password from PDF
+```console
+pdftk input.pdf input_pw <yourpassword> output output.pdf
+```
+
 ## Miscellaneous
 ### Reduce Gif Size
 ```console
@@ -204,4 +209,4 @@ The above information is taken from various sources such as following-
 * [Batch resize Images](https://stackoverflow.com/a/18018161)
 * [Extract Pages from PDF](https://askubuntu.com/a/282455)
 * [Join PDFs](https://askubuntu.com/a/2802)
-* 
+* [Remove password from PDF](https://askubuntu.com/a/828727)
