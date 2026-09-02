@@ -97,6 +97,9 @@ ffmpeg.ffplay -i input.mp4 -vf "crop=80:60:200:100"
     ```console
     ffmpeg -i input.mp4 -ss 00:00:03 -to 00:00:16 -c copy output.mp4
     ```
+    ```console
+    ffmpeg -i input.mp4 -ss 00:00:03 -to 00:00:16 -c:v libx264 -c:a aac output.mp4
+    ```
 * From beginning
     ```console
     ffmpeg -i input.mp4 -t 00:00:30 -c copy output.mp4
