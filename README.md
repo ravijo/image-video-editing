@@ -154,6 +154,10 @@ $ ffmpeg -f concat -safe 0 -i mylist.txt -c copy output.mp4
     ffmpeg -y -i input.mp4 -i palette.png -filter_complex paletteuse \
         -r 10 -s 320x480 output.gif
     ```
+* Set fps etc:
+    ```console
+    ffmpeg -i input.mp4 -vf "fps=15,scale=600:-1:flags=lanczos" output.gif
+    ```
 
 ## PDF Editing
 ## Convert PDF to JPEG
